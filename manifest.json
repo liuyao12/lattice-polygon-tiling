@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "斜体变楷体",
+  "version": "1.0",
+  "description": "Modifies the font styles of Chinese text.",
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "斜体变楷体"
+  }
+}
